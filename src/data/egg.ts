@@ -15,7 +15,7 @@ export enum GachaType {
 
 export class Egg {
   public id: integer;
-  public tier: EggTier;
+  public tier: ULTRA;
   public gachaType: GachaType;
   public hatchWaves: integer;
   public timestamp: integer;
@@ -101,5 +101,6 @@ export function getLegendaryGachaSpeciesForTimestamp(scene: BattleScene, timesta
     ret = Utils.randSeedItem(legendarySpecies);
   }, Utils.getSunday(new Date(timestamp)).getTime(), EGG_SEED.toString());
 
+  
   return ret;
 }
